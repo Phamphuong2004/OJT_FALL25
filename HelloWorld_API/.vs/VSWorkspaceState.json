@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HelloAPI-master",
+    "\\HelloAPI-master\\HelloAPI",
+    "\\HelloAPI-master\\HelloAPI\\Controllers",
+    "\\HelloAPI-master\\HelloAPI\\Interfaces",
+    "\\HelloAPI-master\\HelloAPI\\Models",
+    "\\HelloAPI-master\\HelloAPI\\Properties",
+    "\\HelloAPI-master\\HelloAPI\\Repositories"
+  ],
+  "SelectedNode": "\\HelloAPI-master\\HelloAPI\\appsettings.json",
+  "PreviewInSolutionExplorer": false
+}

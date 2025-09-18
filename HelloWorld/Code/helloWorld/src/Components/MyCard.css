@@ -1,0 +1,27 @@
+.my-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 32px 24px;
+  margin: 24px auto;
+  max-width: 400px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.my-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.my-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 12px;
+}
+
+.my-card-content {
+  font-size: 1.1rem;
+  color: #333;
+}
