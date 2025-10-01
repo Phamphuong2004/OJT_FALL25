@@ -1,0 +1,97 @@
+/* Quản lý User - giao diện hiện đại */
+.manage-user-container {
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 2rem auto;
+}
+.manage-user-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2563eb;
+}
+.manage-user-flex {
+  display: flex;
+  gap: 2.5rem;
+}
+.manage-user-list {
+  min-width: 250px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+}
+.manage-user-list h3 {
+  margin-bottom: 1rem;
+  color: #4f8cff;
+}
+.manage-user-list ul {
+  list-style: none;
+  padding: 0;
+}
+.manage-user-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.manage-user-list button {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.manage-user-list button:hover {
+  background: #2563eb;
+}
+.manage-user-list .delete-btn {
+  background: #ef4444;
+}
+.manage-user-list .delete-btn:hover {
+  background: #dc2626;
+}
+.manage-user-detail {
+  flex: 1;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+}
+.manage-user-detail h3 {
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+.manage-user-detail p {
+  font-size: 1.08rem;
+  margin: 0.5rem 0;
+}
+.manage-user-detail input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.manage-user-detail button {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background 0.2s;
+}
+.manage-user-detail button:hover {
+  background: #2563eb;
+}
