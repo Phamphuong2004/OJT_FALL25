@@ -9,8 +9,18 @@ const MyNavbar = () => {
     window.location.href = "/login";
   };
   return (
-    <nav className="navbar">
-      <ul className="navbar-links">
+    <nav
+      className="navbar"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <ul
+        className="navbar-links"
+        style={{ display: "flex", alignItems: "center", margin: 0 }}
+      >
         <li>
           <NavLink
             to="/"
@@ -50,12 +60,17 @@ const MyNavbar = () => {
         </li>
       </ul>
       {loggedInUser && (
-        <div
+        <span
           className="navbar-user"
-          style={{ marginRight: "32px", fontWeight: "bold", color: "#1976d2" }}
+          style={{
+            fontWeight: "bold",
+            color: "#1976d2",
+            marginRight: "24px",
+            fontSize: "16px",
+          }}
         >
           {loggedInUser}
-        </div>
+        </span>
       )}
     </nav>
   );

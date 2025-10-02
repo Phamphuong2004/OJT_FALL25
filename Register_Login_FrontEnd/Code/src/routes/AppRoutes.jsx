@@ -7,7 +7,6 @@ import ManageUser from "../Manage User/ManageUser";
 const Home = () => (
   <div style={{ textAlign: "center", marginTop: "2rem" }}>
     <h2>Chào mừng đến với trang đăng nhập của chúng tôi</h2>
-    <p>Vui lòng dăng nhập để tiếp tục sử dụng</p>
   </div>
 );
 
