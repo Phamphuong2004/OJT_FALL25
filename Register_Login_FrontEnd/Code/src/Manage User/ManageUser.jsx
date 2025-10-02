@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
-import {
-  getAllUsers,
-  getUserById,
-  updateUser,
-  deleteUser,
-} from "../api/userApi";
+import { getAllUsers, getUserById, deleteUser } from "../api/userApi";
+import EditUserForm from "../Form/EditUserForm";
 import "./ManageUser.css";
 
 const ManageUser = () => {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [editMode, setEditMode] = useState(false);
-  const [form, setForm] = useState({ username: "", email: "", status: "" });
 
   useEffect(() => {
     fetchUsers();
@@ -35,24 +30,13 @@ const ManageUser = () => {
   };
 
   const handleEdit = () => {
-    setForm({
-      username: selectedUser.username,
-      email: selectedUser.email,
-      status: selectedUser.status,
-    });
     setEditMode(true);
   };
 
-  const handleUpdate = async () => {
-    try {
-      await updateUser(selectedUser.id, form);
-      alert("Cập nhật thành công!");
-      setEditMode(false);
-      fetchUsers();
-      handleSelectUser(selectedUser.id);
-    } catch {
-      alert("Cập nhật thất bại!");
-    }
+  const handleSave = () => {
+    setEditMode(false);
+    fetchUsers();
+    handleSelectUser(selectedUser.id);
   };
 
   const handleDelete = async (id) => {
@@ -109,29 +93,7 @@ const ManageUser = () => {
             </div>
           )}
           {selectedUser && editMode && (
-            <div>
-              <h3>Sửa User</h3>
-              <input
-                type="text"
-                value={form.username}
-                onChange={(e) => setForm({ ...form, username: e.target.value })}
-                placeholder="Username"
-              />
-              <input
-                type="email"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="Email"
-              />
-              <input
-                type="text"
-                value={form.status}
-                onChange={(e) => setForm({ ...form, status: e.target.value })}
-                placeholder="Status"
-              />
-              <button onClick={handleUpdate}>Lưu</button>
-              <button onClick={() => setEditMode(false)}>Hủy</button>
-            </div>
+            <EditUserForm user={selectedUser} onSave={handleSave} />
           )}
         </div>
       </div>
